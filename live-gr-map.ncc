@@ -18994,122 +18994,12 @@
 
   <controller type="Rig Kontrol 3">
     <wrapmode>0</wrapmode>
-    <current_index>1</current_index>
-    <midi-map name="Notes" port="internal" type="Guitar Rig">
+    <current_index>0</current_index>
+    <midi-map name="Live" port="internal" type="Guitar Rig">
       <controls>
         <footswitch id="Fsw1">
-          <note>80</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw2">
-          <note>81</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw3">
-          <note>82</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw4">
-          <note>83</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw5">
-          <note>76</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw6">
-          <note>77</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw7">
-          <note>78</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw8">
-          <note>79</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <pedal id="Pedal">
-          <name>CC 7</name>
-          <controller>7</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <pedal id="PedalPlug1">
-          <controller>16</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <pedal id="PedalPlug2">
-          <controller>17</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <footswitch id="PedalSwitch">
-          <note>64</note>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>gate</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-      </controls>
-    </midi-map>
-    <midi-map name="Controllers" port="internal" type="Guitar Rig">
-      <controls>
-        <footswitch id="Fsw1">
-          <note>102</note>
-          <channel>12</channel>
+          <note>24</note>
+          <channel>11</channel>
           <off>0</off>
           <on>127</on>
           <last>0</last>
@@ -19117,8 +19007,8 @@
           <reaction>ondown</reaction>
         </footswitch>
         <footswitch id="Fsw2">
-          <note>103</note>
-          <channel>12</channel>
+          <note>26</note>
+          <channel>11</channel>
           <off>0</off>
           <on>127</on>
           <last>0</last>
@@ -19144,8 +19034,8 @@
           <reaction>ondown</reaction>
         </footswitch>
         <footswitch id="Fsw5">
-          <note>106</note>
-          <channel>12</channel>
+          <note>33</note>
+          <channel>11</channel>
           <off>0</off>
           <on>127</on>
           <last>0</last>
@@ -19153,8 +19043,8 @@
           <reaction>ondown</reaction>
         </footswitch>
         <footswitch id="Fsw6">
-          <note>107</note>
-          <channel>12</channel>
+          <note>35</note>
+          <channel>11</channel>
           <off>0</off>
           <on>127</on>
           <last>0</last>
@@ -19208,212 +19098,6 @@
         <footswitch id="PedalSwitch">
           <controller>110</controller>
           <channel>12</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-      </controls>
-    </midi-map>
-    <midi-map name="Mackie Control" port="internal" type="Guitar Rig">
-      <controls>
-        <footswitch id="Fsw1">
-          <mcu-button>94</mcu-button>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw2">
-          <mcu-button>95</mcu-button>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw3">
-          <mcu-button>93</mcu-button>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw4">
-          <disabled/>
-          <controller>83</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw5">
-          <mcu-button>89</mcu-button>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw6">
-          <mcu-button>91</mcu-button>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw7">
-          <mcu-button>92</mcu-button>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw8">
-          <disabled/>
-          <controller>79</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <pedal id="Pedal">
-          <disabled/>
-          <controller>4</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <pedal id="PedalPlug1">
-          <disabled/>
-          <controller>16</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <pedal id="PedalPlug2">
-          <disabled/>
-          <controller>17</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <footswitch id="PedalSwitch">
-          <disabled/>
-          <controller>64</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-      </controls>
-    </midi-map>
-    <midi-map name="Default" port="internal" type="Guitar Rig">
-      <controls>
-        <footswitch id="Fsw1">
-          <controller>80</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw2">
-          <controller>81</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw3">
-          <controller>82</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw4">
-          <controller>83</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw5">
-          <controller>76</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw6">
-          <controller>77</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw7">
-          <controller>78</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <footswitch id="Fsw8">
-          <controller>79</controller>
-          <channel>0</channel>
-          <off>0</off>
-          <on>127</on>
-          <last>0</last>
-          <behavior>toggle</behavior>
-          <reaction>ondown</reaction>
-        </footswitch>
-        <pedal id="Pedal">
-          <controller>4</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <pedal id="PedalPlug1">
-          <controller>16</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <pedal id="PedalPlug2">
-          <controller>17</controller>
-          <channel>0</channel>
-          <min>0</min>
-          <max>127</max>
-          <default>0</default>
-          <last>0</last>
-        </pedal>
-        <footswitch id="PedalSwitch">
-          <controller>64</controller>
-          <channel>0</channel>
           <off>0</off>
           <on>127</on>
           <last>0</last>
