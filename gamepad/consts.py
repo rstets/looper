@@ -134,16 +134,17 @@ SPEEDLINK_ALT = {
                 {'cc': 65, 'delta': 127, 'name': 'BTN 1 (TOP)', 'value': 31},
                 {'cc': 66, 'delta': 0, 'name': 'BTN 4 (LEFT)', 'value': 143},
                 {'cc': 66, 'delta': 127, 'name': 'BTN 2 (RIGHT)', 'value': 47},
-            ]},
-            {'name': BUTTONS_2, 'type': CC_DELTA_BUTTONS, 'buttons': [
-                {'cc': 59, 'delta': 0, 'name': 'LEFT BOTTOM SHIFT', 'value': 4},
-                {'cc': 59, 'delta': 127, 'name': 'LEFT TOP SHIFT', 'value': 1},
-                {'cc': 60, 'delta': 0, 'name': 'RIGHT BOTTOM SHIFT', 'value': 8},
-                {'cc': 60, 'delta': 127, 'name': 'RIGHT TOP SHIFT', 'value': 2},
+
                 {'cc': 61, 'delta': 0, 'name': 'SELECT', 'value': 16},
                 {'cc': 61, 'delta': 127, 'name': 'START', 'value': 32},
                 {'cc': 62, 'delta': 0, 'name': 'LEFT STICK', 'value': 64},
                 {'cc': 62, 'delta': 127, 'name': 'RIGHT STICK', 'value': 128},
+            ]},
+            {'name': BUTTONS_2, 'type': NOTE, 'buttons': [
+                {'note': 0, 'name': 'LEFT TOP SHIFT', 'value': 1},
+                {'note': 1, 'name': 'LEFT BOTTOM SHIFT', 'value': 4},
+                {'note': 2, 'name': 'RIGHT TOP SHIFT', 'value': 2},
+                {'note': 3, 'name': 'RIGHT BOTTOM SHIFT', 'value': 8},
             ]},
             None,
         ],
