@@ -64,7 +64,7 @@ SPEEDLINK = {
         'id': 'SpeedLink',
         'vid': 121,
         'pid': 6,
-        'channel': 1,
+        'channel': 3,
         'message': [
             {'name': LEFT_X, 'type': CC, 'number': 55,
              'inverse': False},
