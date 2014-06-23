@@ -112,7 +112,7 @@ SPEEDLINK_ALT = {
         'id': 'SpeedLink',
         'vid': 121,
         'pid': 6,
-        'channel': 1,
+        'channel': 3,
         'message': [
             {'name': LEFT_X, 'type': CC_DELTA, 'number': 55, 'inverse': False},
             {'name': LEFT_Y, 'type': CC_DELTA, 'number': 56, 'inverse': True},
