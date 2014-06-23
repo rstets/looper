@@ -32,7 +32,8 @@ class Gamepad:
         if not self.active:
             return
 
-        try:
+        # try:
+        if True:
             value = self.hid.read(16)
             if value and value != self.value:
                 if self.settings:
@@ -40,19 +41,18 @@ class Gamepad:
                         if msg:
                             data = value[m]
 
-                            if msg['type'] == CC:
-                                self.send_cc(msg, data)
-                            elif msg['type'] == CC_DELTA:
-                                self.send_cc_delta(msg, data)
-                            elif msg['type'] == CC_DELTA_BUTTONS and msg['buttons']:
-                                self.send_cc_delta_button(msg, data)
-                            elif msg['type'] == NOTE and msg['buttons']:
-                                self.send_note(msg, data)
+                            if 'buttons' in msg:
+                                self.handle_button(msg, data)
+                            else:
+                                if msg['type'] == CC:
+                                    self.send_cc(msg, data)
+                                elif msg['type'] == CC_DELTA:
+                                    self.send_cc_delta(msg, data)
                 self.value = value
-        except Exception, ex:
-            print ex
-            self.hid.close()
-            self.active = False
+        # except Exception, ex:
+        #     print ex
+        #     self.hid.close()
+        #     self.active = False
 
     def send_cc(self, msg, data):
         if msg['inverse']:
@@ -61,29 +61,17 @@ class Gamepad:
             data /= 2
         self.midi.cc(msg['number'], data)
 
-    def send_note(self, msg, data):
-        for btn in msg['buttons']:
-            if btn['note'] is not None:
-                if 'number' in btn.keys():
-                    if btn['number'] == data:
-                        self.midi.note_on(btn['note'])
-                    else:
-                        self.midi.note_off(btn['note'])
-                elif 'value' in btn.keys():
-                    if data & btn['value'] == btn['value']:
-                        self.midi.note_on(btn['note'])
-                    else:
-                        self.midi.note_off(btn['note'])
+    def send_note(self, btn, data):
+        if btn['note'] is not None:
+            if self.is_on(btn, data):
+                self.midi.note_on(btn['note'])
+            else:
+                self.midi.note_off(btn['note'])
 
-    def send_cc_delta_button(self, msg, data):
-        for btn in msg['buttons']:
-            if btn['cc'] is not None:
-                if 'value' in btn.keys():
-                    if data & btn['value'] == btn['value']:
-                        self.midi.cc_delta(btn['cc'], btn['delta'])
-                if 'number' in btn.keys():
-                    if btn['number'] == data:
-                        self.midi.cc_delta(btn['cc'], btn['delta'])
+    def send_cc_delta_button(self, btn, data):
+        if btn['cc'] is not None:
+            if self.is_on(btn, data):
+                self.midi.cc_delta(btn['cc'], btn['delta'])
 
     def send_cc_delta(self, msg, data):
         if msg['inverse']:
@@ -91,3 +79,17 @@ class Gamepad:
         else:
             data /= 2
         self.midi.cc_delta(msg['number'], data)
+
+    def handle_button(self, msg, data):
+        for btn in msg['buttons']:
+            if 'type' in btn:
+                if btn['type'] == CC_DELTA_BUTTONS:
+                    self.send_cc_delta_button(btn, data)
+                elif btn['type'] == NOTE:
+                    self.send_note(btn, data)
+
+    def is_on(self, btn, data):
+        if 'number' in btn.keys():
+            return btn['number'] == data
+        elif 'value' in btn.keys():
+            return data & btn['value'] == btn['value']

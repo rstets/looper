@@ -15,4 +15,4 @@ gamepads = [Gamepad(SPEEDLINK_ALT)]
 while True:
     for g in gamepads:
         g.query()
-        time.sleep(0.0002)
+        time.sleep(0.020)  # 20ms
